@@ -1,0 +1,1 @@
+include ':cmake_demo', ':ndk_build_demo'

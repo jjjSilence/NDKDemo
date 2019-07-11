@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Android.mk",
+    "/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/home/jjj/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib APP_CFLAGS+\u003d-DTEST_C_FLAG1 APP_CFLAGS+\u003d-DTEST_C_FLAG2 APP_CPPFLAGS+\u003d-DTEST_CPP_FLAG2 APP_CPPFLAGS+\u003d-DTEST_CPP_FLAG2 NDK_APPLICATION_MK:\u003dsrc/main/jni/Application.mk clean"
+  ],
+  "libraries": {
+    "native-lib-debug-armeabi-v7a": {
+      "buildCommand": "/home/jjj/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib APP_CFLAGS+\u003d-DTEST_C_FLAG1 APP_CFLAGS+\u003d-DTEST_C_FLAG2 APP_CPPFLAGS+\u003d-DTEST_CPP_FLAG2 APP_CPPFLAGS+\u003d-DTEST_CPP_FLAG2 NDK_APPLICATION_MK:\u003dsrc/main/jni/Application.mk /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libnative-lib.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/native-lib.cpp",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -I/home/jjj/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include -I/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni -DTEST_C_FLAG1 -DTEST_C_FLAG2 -DTEST_CPP_FLAG2 -DTEST_CPP_FLAG2 -DANDROID -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "/home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cppCompilerExecutable": "/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

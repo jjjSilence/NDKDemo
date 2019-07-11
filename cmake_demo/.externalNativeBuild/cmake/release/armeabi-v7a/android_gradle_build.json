@@ -1,0 +1,59 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/jjj/Projects/MyApplication/cmake_demo/src/main/cpp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/jjj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"libaiengine-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libaiengine",
+			"buildCommand" : "/home/jjj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/release/armeabi-v7a --target libaiengine",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dlibaiengine_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/jjj/Projects/MyApplication/cmake_demo/src/main/cpp/aiengine.cpp",
+					"workingDirectory" : "/home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/release/armeabi-v7a"
+				}
+			],
+			"output" : "/home/jjj/Projects/MyApplication/cmake_demo/build/intermediates/cmake/release/obj/armeabi-v7a/liblibaiengine.so",
+			"toolchain" : "8827643725732978404"
+		},
+		"native-lib-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/home/jjj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/release/armeabi-v7a --target native-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I/home/jjj/Projects/MyApplication/cmake_demo/src/main/cpp/../myinclude -I/home/jjj/Projects/MyApplication/cmake_demo/src/main/cpp/../libs/{ANDROID_ABI}/libaiengine.so  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/jjj/Projects/MyApplication/cmake_demo/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/release/armeabi-v7a"
+				}
+			],
+			"output" : "/home/jjj/Projects/MyApplication/cmake_demo/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so",
+			"toolchain" : "8827643725732978404"
+		}
+	},
+	"toolchains" : 
+	{
+		"8827643725732978404" : 
+		{
+			"cCompilerExecutable" : "/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

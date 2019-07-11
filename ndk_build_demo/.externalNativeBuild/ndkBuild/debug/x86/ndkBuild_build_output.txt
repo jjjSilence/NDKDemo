@@ -1,0 +1,24 @@
+Android NDK: WARNING: Unsupported source file extensions in /home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/Android.mk for module native-lib    
+Android NDK:   :    
+rm -f /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/*
+rm -f /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdbserver
+rm -f /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdb.setup
+mkdir -p /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86
+echo [x86] "Gdbserver      ": "[i686-linux-android] /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdbserver"
+install -p /home/jjj/Android/Sdk/ndk-bundle/prebuilt/android-x86/gdbserver/gdbserver /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdbserver
+echo [x86] "Gdbsetup       ": "/home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdb.setup"
+echo "set solib-search-path /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86" > /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdb.setup
+echo "directory /home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot /home/jjj/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include /home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni" >> /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/gdb.setup
+mkdir -p /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/objs-debug/native-lib
+echo [x86] "Compile++      ": "native-lib <= native-lib.cpp"
+rm -f /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/objs-debug/native-lib/native-lib.o
+/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -MMD -MP -MF /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/objs-debug/native-lib/native-lib.o.d -target i686-none-linux-android16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes  --sysroot /home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument  -fno-addrsig -fno-exceptions -fno-rtti -fPIC -O0 -UNDEBUG -fno-limit-debug-info  -I/home/jjj/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include -I/home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni  -DTEST_C_FLAG1 -DTEST_C_FLAG2 -DTEST_CPP_FLAG2 -DTEST_CPP_FLAG2  -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security -mstackrealign   -c  /home/jjj/Projects/MyApplication/ndk_build_demo/src/main/jni/native-lib.cpp -o /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/objs-debug/native-lib/native-lib.o
+mkdir -p /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86
+echo [x86] "StaticLibrary  ": "libstdc++.a"
+rm -f /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/libstdc++.a
+/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android-ar crsD  /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/libstdc++.a 
+echo [x86] "SharedLibrary  ": "libnative-lib.so"
+/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -Wl,-soname,libnative-lib.so -shared /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/objs-debug/native-lib/native-lib.o /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/libstdc++.a -lgcc -Wl,--exclude-libs,libgcc.a -latomic -Wl,--exclude-libs,libatomic.a -target i686-none-linux-android16 -no-canonical-prefixes     -Wl,--build-id -stdlib=libstdc++ -Wl,--no-undefined -Wl,-z,noexecstack -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lstdc++ -lc -lm -o /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/libnative-lib.so
+echo [x86] "Install        ": "libnative-lib.so => /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/libnative-lib.so"
+install -p /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/obj/local/x86/libnative-lib.so /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/libnative-lib.so
+/home/jjj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android-strip --strip-unneeded  /home/jjj/Projects/MyApplication/ndk_build_demo/build/intermediates/ndkBuild/debug/lib/x86/libnative-lib.so

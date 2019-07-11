@@ -1,0 +1,4 @@
+/home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/libaiengine.dir
+/home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/jjj/Projects/MyApplication/cmake_demo/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir
